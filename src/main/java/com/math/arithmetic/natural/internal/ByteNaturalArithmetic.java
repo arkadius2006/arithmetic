@@ -4,14 +4,13 @@ import com.math.BinaryOperation;
 import com.math.BinaryRelation;
 import com.math.ComparisonFunction;
 import com.math.Relation;
+import com.math.arithmetic.natural.DivisionNaturalAlgorithm;
 import com.math.arithmetic.natural.Natural;
 import com.math.arithmetic.natural.NaturalArithmetic;
-import com.math.arithmetic.natural.base.IsEqualToNaturalBinaryRelation;
-import com.math.arithmetic.natural.base.IsGreaterThanNatualBinaryRelation;
-import com.math.arithmetic.natural.base.IsLessThanNaturalBinaryRelation;
-import com.math.arithmetic.natural.base.MultiplicationNaturalBinaryOperation;
+import com.math.arithmetic.natural.base.*;
 import com.math.arithmetic.natural.internal.algorithm.LongMultiplicationByteNaturalAlgorithm;
 import com.math.arithmetic.natural.MultiplicationNaturalAlgorithm;
+import com.math.arithmetic.natural.internal.algorithm.NewtonRaphsonDivisonByteNaturalAlgorithm;
 
 
 /**
@@ -28,6 +27,12 @@ public class ByteNaturalArithmetic implements NaturalArithmetic {
     private final MultiplicationNaturalAlgorithm multiplicationAlgorithm;
     private final MultiplicationNaturalBinaryOperation multiplicationOperation;
 
+    private final DivisionNaturalAlgorithm divisionAlgorithm;
+    private final BinaryOperation<Natural> quotientOperation;
+    private final BinaryOperation<Natural> remainderOperation;
+    private final BinaryRelation<Natural> isDivisorOfRelation;
+    private final BinaryRelation<Natural> isMultipleOfRelation;
+
     public ByteNaturalArithmetic() {
         this.isZeroRelation = new IsZeroByteNaturalRelation(this);
 
@@ -41,6 +46,11 @@ public class ByteNaturalArithmetic implements NaturalArithmetic {
         this.multiplicationAlgorithm = new LongMultiplicationByteNaturalAlgorithm(this);
         this.multiplicationOperation = new MultiplicationNaturalBinaryOperation(multiplicationAlgorithm);
 
+        this.divisionAlgorithm = new NewtonRaphsonDivisonByteNaturalAlgorithm(this);
+        this.quotientOperation = new QuotientNaturalBinaryOperation(divisionAlgorithm);
+        this.remainderOperation = new RemainderNaturalBinaryOperation(divisionAlgorithm);
+        this.isDivisorOfRelation = new IsDivisorOfNaturalBinaryRelation(remainderOperation, isZeroRelation);
+        this.isMultipleOfRelation = new IsMultipleOfNaturalBinaryRelation(remainderOperation, isZeroRelation);
     }
 
     // factory method specific to this implementation
@@ -94,12 +104,12 @@ public class ByteNaturalArithmetic implements NaturalArithmetic {
 
     @Override
     public BinaryRelation<Natural> isDivisorOf() {
-        return null;
+        return isDivisorOfRelation;
     }
 
     @Override
     public BinaryRelation<Natural> isMultipleOf() {
-        return null;
+        return isMultipleOfRelation;
     }
 
     @Override
@@ -114,12 +124,12 @@ public class ByteNaturalArithmetic implements NaturalArithmetic {
 
     @Override
     public BinaryOperation<Natural> quotient() {
-        return null;
+        return quotientOperation;
     }
 
     @Override
     public BinaryOperation<Natural> remainder() {
-        return null;
+        return remainderOperation;
     }
 
     @Override
