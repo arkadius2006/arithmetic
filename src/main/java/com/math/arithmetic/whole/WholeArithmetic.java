@@ -76,6 +76,4 @@ public interface WholeArithmetic {
     // todo factory and conversion methods
 
 
-
-
 }

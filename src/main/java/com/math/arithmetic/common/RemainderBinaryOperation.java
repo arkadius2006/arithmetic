@@ -1,9 +1,7 @@
 package com.math.arithmetic.common;
 
 import com.math.arithmetic.DivisionFunction;
-import com.math.arithmetic.common.DivisionAlgorithm;
 import com.math.function.BinaryOperation;
-import com.math.arithmetic.natural.Natural;
 
 /**
  * Created by arkadiy on 02/07/17.

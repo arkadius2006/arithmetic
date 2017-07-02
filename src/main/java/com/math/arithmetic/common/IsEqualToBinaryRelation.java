@@ -1,6 +1,5 @@
 package com.math.arithmetic.common;
 
-import com.math.arithmetic.natural.Natural;
 import com.math.function.BinaryRelation;
 import com.math.function.ComparisonFunction;
 

@@ -2,7 +2,6 @@ package com.math.arithmetic.whole.wrap;
 
 import com.math.arithmetic.natural.Natural;
 import com.math.arithmetic.whole.Whole;
-import com.math.arithmetic.whole.WholeArithmetic;
 
 /**
  * Created by arkadiy on 02/07/17.

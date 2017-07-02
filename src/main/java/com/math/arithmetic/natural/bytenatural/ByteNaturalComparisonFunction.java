@@ -1,7 +1,7 @@
 package com.math.arithmetic.natural.bytenatural;
 
-import com.math.function.ComparisonFunction;
 import com.math.arithmetic.natural.Natural;
+import com.math.function.ComparisonFunction;
 
 /**
  * Created by arkadiy on 02/07/17.

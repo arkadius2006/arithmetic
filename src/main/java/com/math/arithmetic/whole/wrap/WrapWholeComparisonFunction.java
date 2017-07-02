@@ -6,7 +6,7 @@ import com.math.function.ComparisonFunction;
 /**
  * Created by arkadiy on 02/07/17.
  */
-public class WrapWholeComparisonFunction implements ComparisonFunction<Whole>{
+public class WrapWholeComparisonFunction implements ComparisonFunction<Whole> {
     private final WrapWholeArithmetic wholeArithmetic;
 
     public WrapWholeComparisonFunction(WrapWholeArithmetic wholeArithmetic) {

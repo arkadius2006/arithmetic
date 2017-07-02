@@ -3,7 +3,6 @@ package com.math.arithmetic.common;
 import com.math.function.BinaryOperation;
 import com.math.function.BinaryRelation;
 import com.math.function.Relation;
-import com.math.arithmetic.natural.Natural;
 
 /**
  * Created by arkadiy on 02/07/17.

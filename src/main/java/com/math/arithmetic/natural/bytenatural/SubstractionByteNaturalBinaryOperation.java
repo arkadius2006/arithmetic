@@ -1,8 +1,8 @@
 package com.math.arithmetic.natural.bytenatural;
 
+import com.math.arithmetic.natural.Natural;
 import com.math.function.BinaryOperation;
 import com.math.function.ComparisonFunction;
-import com.math.arithmetic.natural.Natural;
 
 /**
  * Created by arkadiy on 02/07/17.

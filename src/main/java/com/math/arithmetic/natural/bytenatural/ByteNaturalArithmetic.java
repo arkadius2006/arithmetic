@@ -39,8 +39,8 @@ public class ByteNaturalArithmetic implements NaturalArithmetic {
 
     public ByteNaturalArithmetic() {
 
-        this.zero = newValue(new byte[] {});
-        this.one = newValue(new byte[] {1});
+        this.zero = newValue(new byte[]{});
+        this.one = newValue(new byte[]{1});
 
         this.comparisonFunction = new ByteNaturalComparisonFunction(this);
         this.isLessThanRelation = new IsLessThanBinaryRelation<Natural>(comparisonFunction);

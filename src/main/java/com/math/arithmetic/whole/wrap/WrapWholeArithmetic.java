@@ -1,7 +1,9 @@
 package com.math.arithmetic.whole.wrap;
 
 import com.math.arithmetic.DivisionFunction;
-import com.math.arithmetic.common.*;
+import com.math.arithmetic.common.IsEqualToBinaryRelation;
+import com.math.arithmetic.common.IsGreaterThanBinaryRelation;
+import com.math.arithmetic.common.IsLessThanBinaryRelation;
 import com.math.arithmetic.natural.Natural;
 import com.math.arithmetic.natural.NaturalArithmetic;
 import com.math.arithmetic.whole.Whole;
