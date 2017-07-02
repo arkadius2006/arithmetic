@@ -8,7 +8,7 @@ import java.util.Arrays;
 /**
  * Created by arkadiy on 02/07/17.
  */
-public class AdditionByteNaturalBinaryOperation implements BinaryOperation<Natural> {
+class AdditionByteNaturalBinaryOperation implements BinaryOperation<Natural> {
     private final ByteNaturalArithmetic naturalArithmetic;
 
     public AdditionByteNaturalBinaryOperation(ByteNaturalArithmetic naturalArithmetic) {
