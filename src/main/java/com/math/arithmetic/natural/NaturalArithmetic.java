@@ -1,9 +1,6 @@
 package com.math.arithmetic.natural;
 
-import com.math.BinaryOperation;
-import com.math.BinaryRelation;
-import com.math.ComparisonFunction;
-import com.math.Relation;
+import com.math.*;
 
 
 /**
@@ -32,12 +29,23 @@ public interface NaturalArithmetic {
 
     BinaryOperation<Natural> addition();
 
+    BinaryOperation<Natural> substraction();
+
+    Operation<Natural> increment();
+
+    Operation<Natural> decrement();
+
     BinaryOperation<Natural> multiplication();
 
     BinaryOperation<Natural> quotient();
 
     BinaryOperation<Natural> remainder();
 
+    // special values
+
+    Natural zero();
+
+    Natural one();
 
     // factory methods
 

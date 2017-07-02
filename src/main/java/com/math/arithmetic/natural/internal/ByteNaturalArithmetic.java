@@ -1,9 +1,6 @@
 package com.math.arithmetic.natural.internal;
 
-import com.math.BinaryOperation;
-import com.math.BinaryRelation;
-import com.math.ComparisonFunction;
-import com.math.Relation;
+import com.math.*;
 import com.math.arithmetic.natural.DivisionNaturalAlgorithm;
 import com.math.arithmetic.natural.Natural;
 import com.math.arithmetic.natural.NaturalArithmetic;
@@ -24,6 +21,11 @@ public class ByteNaturalArithmetic implements NaturalArithmetic {
     private final BinaryRelation<Natural> isEqualToRelation;
     private final BinaryRelation<Natural> isGreaterThanRelation;
     private final BinaryOperation<Natural> additionOperation;
+    private final BinaryOperation<Natural> substractionOperation;
+    private final Operation<Natural> incrementOperation;
+    private final Operation<Natural> decrementOperation;
+
+
     private final MultiplicationNaturalAlgorithm multiplicationAlgorithm;
     private final MultiplicationNaturalBinaryOperation multiplicationOperation;
 
@@ -33,15 +35,25 @@ public class ByteNaturalArithmetic implements NaturalArithmetic {
     private final BinaryRelation<Natural> isDivisorOfRelation;
     private final BinaryRelation<Natural> isMultipleOfRelation;
 
+    private final Natural zero;
+    private final Natural one;
+
     public ByteNaturalArithmetic() {
-        this.isZeroRelation = new IsZeroByteNaturalRelation(this);
+
+        this.zero = newValue(new byte[] {});
+        this.one = newValue(new byte[] {1});
 
         this.comparisonFunction = new ByteNaturalComparisonFunction(this);
         this.isLessThanRelation = new IsLessThanNaturalBinaryRelation(comparisonFunction);
         this.isEqualToRelation = new IsEqualToNaturalBinaryRelation(comparisonFunction);
         this.isGreaterThanRelation = new IsGreaterThanNatualBinaryRelation(comparisonFunction);
 
+        this.isZeroRelation = new IsZeroNaturalRelation(isEqualToRelation, zero);
+
         this.additionOperation = new AdditionByteNaturalBinaryOperation(this);
+        this.substractionOperation = new SubstractionByteNaturalBinaryOperation(this);
+        this.incrementOperation = new IncrementNaturalOperation(additionOperation, one);
+        this.decrementOperation = new DecrementNaturalOperation(substractionOperation, one);
 
         this.multiplicationAlgorithm = new LongMultiplicationByteNaturalAlgorithm(this);
         this.multiplicationOperation = new MultiplicationNaturalBinaryOperation(multiplicationAlgorithm);
@@ -118,6 +130,21 @@ public class ByteNaturalArithmetic implements NaturalArithmetic {
     }
 
     @Override
+    public BinaryOperation<Natural> substraction() {
+        return substractionOperation;
+    }
+
+    @Override
+    public Operation<Natural> increment() {
+        return incrementOperation;
+    }
+
+    @Override
+    public Operation<Natural> decrement() {
+        return decrementOperation;
+    }
+
+    @Override
     public BinaryOperation<Natural> multiplication() {
         return multiplicationOperation;
     }
@@ -130,6 +157,16 @@ public class ByteNaturalArithmetic implements NaturalArithmetic {
     @Override
     public BinaryOperation<Natural> remainder() {
         return remainderOperation;
+    }
+
+    @Override
+    public Natural zero() {
+        return zero;
+    }
+
+    @Override
+    public Natural one() {
+        return one;
     }
 
     @Override
