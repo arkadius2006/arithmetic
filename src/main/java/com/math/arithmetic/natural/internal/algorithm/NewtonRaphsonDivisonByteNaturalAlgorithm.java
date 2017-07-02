@@ -1,6 +1,6 @@
 package com.math.arithmetic.natural.internal.algorithm;
 
-import com.math.arithmetic.natural.DivisionNaturalAlgorithm;
+import com.math.arithmetic.natural.base.DivisionNaturalAlgorithm;
 import com.math.arithmetic.natural.Natural;
 import com.math.arithmetic.natural.internal.ByteNaturalArithmetic;
 

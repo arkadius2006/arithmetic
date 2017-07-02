@@ -1,4 +1,4 @@
-package com.math.arithmetic.natural;
+package com.math.arithmetic.natural.base;
 
 import com.math.arithmetic.natural.Natural;
 

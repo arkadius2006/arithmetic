@@ -2,7 +2,6 @@ package com.math.arithmetic.natural.base;
 
 import com.math.function.BinaryOperation;
 import com.math.arithmetic.natural.Natural;
-import com.math.arithmetic.natural.MultiplicationNaturalAlgorithm;
 
 
 /**

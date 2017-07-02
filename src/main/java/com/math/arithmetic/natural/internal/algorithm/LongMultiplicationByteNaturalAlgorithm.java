@@ -1,6 +1,6 @@
 package com.math.arithmetic.natural.internal.algorithm;
 
-import com.math.arithmetic.natural.MultiplicationNaturalAlgorithm;
+import com.math.arithmetic.natural.base.MultiplicationNaturalAlgorithm;
 import com.math.arithmetic.natural.Natural;
 import com.math.arithmetic.natural.internal.ByteNatural;
 import com.math.arithmetic.natural.internal.ByteNaturalArithmetic;

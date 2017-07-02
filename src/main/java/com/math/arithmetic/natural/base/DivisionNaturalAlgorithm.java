@@ -1,4 +1,6 @@
-package com.math.arithmetic.natural;
+package com.math.arithmetic.natural.base;
+
+import com.math.arithmetic.natural.Natural;
 
 /**
  * Created by arkadiy on 02/07/17.

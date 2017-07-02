@@ -1,7 +1,6 @@
 package com.math.arithmetic.natural.base;
 
 import com.math.function.BinaryOperation;
-import com.math.arithmetic.natural.DivisionNaturalAlgorithm;
 import com.math.arithmetic.natural.Natural;
 
 /**
