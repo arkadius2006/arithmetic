@@ -45,30 +45,33 @@ public class ByteNaturalArithmetic implements NaturalArithmetic {
 
     public ByteNaturalArithmetic() {
 
+        // special values
         this.zero = newValue(new byte[]{});
         this.one = newValue(new byte[]{1});
 
+        // comparison
         this.comparisonFunction = new ByteNaturalComparisonFunction(this);
         this.isLessThanRelation = new IsLessThanBinaryRelation<Natural>(comparisonFunction);
         this.isEqualToRelation = new IsEqualToBinaryRelation<Natural>(comparisonFunction);
         this.isGreaterThanRelation = new IsGreaterThanBinaryRelation<Natural>(comparisonFunction);
-
         this.isZeroRelation = new ReducedBySecondOperandBinaryRelation<Natural>(isEqualToRelation, zero);
 
+        // addition
         this.additionAlgorithm = new ByteNaturalAdditionAlgorithm(this);
         this.additionOperation = new AdditionBinaryOperation<Natural>(additionAlgorithm);
         this.incrementOperation = new ReducedBySecondOperandBinaryOperation<Natural>(additionOperation, one);
 
+        // substraction
         this.substractionAlgorithm = new ByteNaturalSubstractionAlgorithm(this);
         this.substractionOperation = new SubstractionBinaryOperation<Natural>(substractionAlgorithm);
         this.decrementOperation = new ReducedBySecondOperandBinaryOperation<Natural>(substractionOperation, one);
 
+        // multiplication
         this.multiplicationAlgorithm = new LongByteNaturalMultiplicationAlgorithm(this);
         this.multiplicationOperation = new MultiplicationBinaryOperation<Natural>(multiplicationAlgorithm);
 
-
+        // division
         this.divisionAlgorithm = new NewtonRaphsonByteNaturalDivisonAlgorithm(this);
-
         this.quotientOperation = new QuotientBinaryOperation<Natural>(divisionAlgorithm);
         this.remainderOperation = new RemainderBinaryOperation<Natural>(divisionAlgorithm);
         this.floorOperation = new FloorBinaryOperation<Natural>(divisionAlgorithm);
