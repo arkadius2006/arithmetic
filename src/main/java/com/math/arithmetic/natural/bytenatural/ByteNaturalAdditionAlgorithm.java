@@ -1,24 +1,24 @@
 package com.math.arithmetic.natural.bytenatural;
 
+import com.math.arithmetic.common.AdditionAlgorithm;
 import com.math.arithmetic.natural.Natural;
-import com.math.function.BinaryOperation;
 
 import java.util.Arrays;
 
 /**
  * Created by arkadiy on 02/07/17.
  */
-class AdditionByteNaturalBinaryOperation implements BinaryOperation<Natural> {
+class ByteNaturalAdditionAlgorithm implements AdditionAlgorithm<Natural> {
     private final ByteNaturalArithmetic naturalArithmetic;
 
-    public AdditionByteNaturalBinaryOperation(ByteNaturalArithmetic naturalArithmetic) {
+    public ByteNaturalAdditionAlgorithm(ByteNaturalArithmetic naturalArithmetic) {
         this.naturalArithmetic = naturalArithmetic;
     }
 
     @Override
-    public ByteNatural apply(Natural first, Natural second) {
-        ByteNatural a = naturalArithmetic.cast(first);
-        ByteNatural b = naturalArithmetic.cast(second);
+    public ByteNatural sum(Natural augend, Natural addend) {
+        ByteNatural a = naturalArithmetic.cast(augend);
+        ByteNatural b = naturalArithmetic.cast(addend);
 
         int an = a.getArrayLength();
         int bn = b.getArrayLength();

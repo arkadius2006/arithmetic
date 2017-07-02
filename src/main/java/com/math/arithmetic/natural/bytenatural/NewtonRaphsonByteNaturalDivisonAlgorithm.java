@@ -6,10 +6,10 @@ import com.math.arithmetic.natural.Natural;
 /**
  * Created by arkadiy on 02/07/17.
  */
-class NewtonRaphsonDivisonByteNaturalAlgorithm implements DivisionAlgorithm<Natural> {
+class NewtonRaphsonByteNaturalDivisonAlgorithm implements DivisionAlgorithm<Natural> {
     private final ByteNaturalArithmetic naturalArithmetic;
 
-    public NewtonRaphsonDivisonByteNaturalAlgorithm(ByteNaturalArithmetic naturalArithmetic) {
+    public NewtonRaphsonByteNaturalDivisonAlgorithm(ByteNaturalArithmetic naturalArithmetic) {
         this.naturalArithmetic = naturalArithmetic;
     }
 

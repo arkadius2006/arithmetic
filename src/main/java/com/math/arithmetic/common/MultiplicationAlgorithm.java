@@ -5,5 +5,5 @@ package com.math.arithmetic.common;
  */
 public interface MultiplicationAlgorithm<T> {
 
-    T multiply(T a, T b);
+    T multiply(T multiplicand, T multiplier);
 }

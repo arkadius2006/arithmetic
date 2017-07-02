@@ -16,9 +16,13 @@ public class ByteNaturalArithmetic implements NaturalArithmetic {
     private final BinaryRelation<Natural> isLessThanRelation;
     private final BinaryRelation<Natural> isEqualToRelation;
     private final BinaryRelation<Natural> isGreaterThanRelation;
+
+    private final AdditionAlgorithm<Natural> additionAlgorithm;
     private final BinaryOperation<Natural> additionOperation;
-    private final BinaryOperation<Natural> substractionOperation;
     private final Operation<Natural> incrementOperation;
+
+    private final SubstractionAlgorithm<Natural> substractionAlgorithm;
+    private final BinaryOperation<Natural> substractionOperation;
     private final Operation<Natural> decrementOperation;
 
 
@@ -51,16 +55,19 @@ public class ByteNaturalArithmetic implements NaturalArithmetic {
 
         this.isZeroRelation = new ReducedBySecondOperandBinaryRelation<Natural>(isEqualToRelation, zero);
 
-        this.additionOperation = new AdditionByteNaturalBinaryOperation(this);
-        this.substractionOperation = new SubstractionByteNaturalBinaryOperation(this);
+        this.additionAlgorithm = new ByteNaturalAdditionAlgorithm(this);
+        this.additionOperation = new AdditionBinaryOperation<Natural>(additionAlgorithm);
         this.incrementOperation = new ReducedBySecondOperandBinaryOperation<Natural>(additionOperation, one);
+
+        this.substractionAlgorithm = new ByteNaturalSubstractionAlgorithm(this);
+        this.substractionOperation = new SubstractionBinaryOperation<Natural>(substractionAlgorithm);
         this.decrementOperation = new ReducedBySecondOperandBinaryOperation<Natural>(substractionOperation, one);
 
-        this.multiplicationAlgorithm = new LongMultiplicationByteAlgorithm(this);
+        this.multiplicationAlgorithm = new LongByteNaturalMultiplicationAlgorithm(this);
         this.multiplicationOperation = new MultiplicationBinaryOperation<Natural>(multiplicationAlgorithm);
 
 
-        this.divisionAlgorithm = new NewtonRaphsonDivisonByteNaturalAlgorithm(this);
+        this.divisionAlgorithm = new NewtonRaphsonByteNaturalDivisonAlgorithm(this);
 
         this.quotientOperation = new QuotientBinaryOperation<Natural>(divisionAlgorithm);
         this.remainderOperation = new RemainderBinaryOperation<Natural>(divisionAlgorithm);

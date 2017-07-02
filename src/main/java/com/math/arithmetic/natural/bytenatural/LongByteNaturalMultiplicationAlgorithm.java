@@ -6,15 +6,15 @@ import com.math.arithmetic.natural.Natural;
 /**
  * Created by arkadiy on 02/07/17.
  */
-class LongMultiplicationByteAlgorithm implements MultiplicationAlgorithm<Natural> {
+class LongByteNaturalMultiplicationAlgorithm implements MultiplicationAlgorithm<Natural> {
     private final ByteNaturalArithmetic naturalArithmetic;
 
-    public LongMultiplicationByteAlgorithm(ByteNaturalArithmetic naturalArithmetic) {
+    public LongByteNaturalMultiplicationAlgorithm(ByteNaturalArithmetic naturalArithmetic) {
         this.naturalArithmetic = naturalArithmetic;
     }
 
     @Override
-    public ByteNatural multiply(Natural a, Natural b) {
+    public ByteNatural multiply(Natural multiplicand, Natural multiplier) {
         throw new UnsupportedOperationException("Not implemented");
     }
 }
