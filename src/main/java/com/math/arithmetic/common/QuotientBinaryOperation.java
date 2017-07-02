@@ -7,15 +7,14 @@ import com.math.function.BinaryOperation;
  */
 public class QuotientBinaryOperation<T> implements BinaryOperation<T> {
 
-    private final DivisionFunction<T> divisionFunction;
+    private final DivisionAlgorithm<T> algorithm;
 
-    public QuotientBinaryOperation(DivisionFunction<T> divisionFunction) {
-        this.divisionFunction = divisionFunction;
+    public QuotientBinaryOperation(DivisionAlgorithm<T> algorithm) {
+        this.algorithm = algorithm;
     }
 
     @Override
     public T apply(T dividend, T divisor) {
-        DivisionFunction.Result<T> result = divisionFunction.apply(dividend, divisor);
-        return result.quotient;
+        return algorithm.quotient(dividend, divisor);
     }
 }

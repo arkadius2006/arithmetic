@@ -1,6 +1,5 @@
 package com.math.arithmetic.whole.wrap;
 
-import com.math.arithmetic.common.DivisionFunction;
 import com.math.arithmetic.common.IsEqualToBinaryRelation;
 import com.math.arithmetic.common.IsGreaterThanBinaryRelation;
 import com.math.arithmetic.common.IsLessThanBinaryRelation;
@@ -194,11 +193,6 @@ public class WrapWholeArithmetic implements WholeArithmetic {
 
     @Override
     public BinaryOperation<Whole> lcm() {
-        return null;
-    }
-
-    @Override
-    public DivisionFunction<Whole> division() {
         return null;
     }
 

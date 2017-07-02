@@ -1,6 +1,5 @@
 package com.math.arithmetic.whole;
 
-import com.math.arithmetic.common.DivisionFunction;
 import com.math.function.*;
 
 
@@ -70,8 +69,6 @@ public interface WholeArithmetic {
     BinaryOperation<Whole> gcd();
 
     BinaryOperation<Whole> lcm();
-
-    DivisionFunction<Whole> division();
 
     // todo factory and conversion methods
 

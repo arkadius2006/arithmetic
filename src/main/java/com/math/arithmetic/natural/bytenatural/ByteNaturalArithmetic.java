@@ -1,6 +1,5 @@
 package com.math.arithmetic.natural.bytenatural;
 
-import com.math.arithmetic.common.DivisionFunction;
 import com.math.arithmetic.common.*;
 import com.math.arithmetic.natural.Natural;
 import com.math.arithmetic.natural.NaturalArithmetic;
@@ -25,8 +24,6 @@ public class ByteNaturalArithmetic implements NaturalArithmetic {
 
     private final MultiplicationAlgorithm<Natural> multiplicationAlgorithm;
     private final BinaryOperation<Natural> multiplicationOperation;
-
-    private final DivisionFunction<Natural> divisionFunction;
 
     private final DivisionAlgorithm<Natural> divisionAlgorithm;
     private final BinaryOperation<Natural> quotientOperation;
@@ -58,12 +55,10 @@ public class ByteNaturalArithmetic implements NaturalArithmetic {
         this.multiplicationOperation = new MultiplicationBinaryOperation<Natural>(multiplicationAlgorithm);
 
 
-        this.divisionAlgorithm = new NewtonRaphsonDivisonByteAlgorithm(this);
+        this.divisionAlgorithm = new NewtonRaphsonDivisonByteNaturalAlgorithm(this);
 
-        this.divisionFunction = new BaseDivisionFunction<Natural>(divisionAlgorithm);
-
-        this.quotientOperation = new QuotientBinaryOperation<Natural>(divisionFunction);
-        this.remainderOperation = new RemainderBinaryOperation<Natural>(divisionFunction);
+        this.quotientOperation = new QuotientBinaryOperation<Natural>(divisionAlgorithm);
+        this.remainderOperation = new RemainderBinaryOperation<Natural>(divisionAlgorithm);
         this.isDivisorOfRelation = new IsDivisorOfBinaryRelation<Natural>(remainderOperation, isZeroRelation);
         this.isMultipleOfRelation = new IsMultipleOfBinaryRelation<Natural>(remainderOperation, isZeroRelation);
     }
