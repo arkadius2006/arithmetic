@@ -10,23 +10,23 @@ import java.util.function.BinaryOperator;
  */
 public interface NaturalArithmetic {
 
-    Relation<Natural> isZero();
+    Relation<ByteNatural> isZero();
 
-    BinaryRelation<Natural> isLessThan();
+    BinaryRelation<ByteNatural> isLessThan();
 
-    BinaryRelation<Natural> isEqualTo();
+    BinaryRelation<ByteNatural> isEqualTo();
 
-    BinaryRelation<Natural> isGreaterThan();
+    BinaryRelation<ByteNatural> isGreaterThan();
 
-    BinaryRelation<Natural> isDivisorOf();
+    BinaryRelation<ByteNatural> isDivisorOf();
 
-    BinaryRelation<Natural> isMultipleOf();
+    BinaryRelation<ByteNatural> isMultipleOf();
 
-    BinaryOperator<Natural> addition();
+    BinaryOperator<ByteNatural> addition();
 
-    BinaryOperator<Natural> multiplication();
+    BinaryOperator<ByteNatural> multiplication();
 
-    BinaryOperator<Natural> quotient();
+    BinaryOperator<ByteNatural> quotient();
 
-    BinaryOperator<Natural> remainder();
+    BinaryOperator<ByteNatural> remainder();
 }

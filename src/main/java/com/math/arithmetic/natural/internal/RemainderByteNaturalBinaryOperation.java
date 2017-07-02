@@ -1,6 +1,6 @@
 package com.math.arithmetic.natural.internal;
 
-import com.math.BinaryRelation;
+import com.math.BinaryOperation;
 import com.math.arithmetic.natural.ByteNatural;
 import com.math.arithmetic.natural.internal.algorithm.DivisionByteNaturalAlgorithm;
 import com.math.arithmetic.natural.internal.algorithm.DivisionByteNaturalAlgorithmResult;
@@ -8,17 +8,16 @@ import com.math.arithmetic.natural.internal.algorithm.DivisionByteNaturalAlgorit
 /**
  * Created by arkadiy on 02/07/17.
  */
-public class MultipleNaturalBinaryRelation implements BinaryRelation<ByteNatural>{
+public class RemainderByteNaturalBinaryOperation implements BinaryOperation<ByteNatural> {
     private final DivisionByteNaturalAlgorithm algorithm;
 
-    public MultipleNaturalBinaryRelation(DivisionByteNaturalAlgorithm algorithm) {
+    public RemainderByteNaturalBinaryOperation(DivisionByteNaturalAlgorithm algorithm) {
         this.algorithm = algorithm;
     }
 
     @Override
-    public boolean test(ByteNatural a, ByteNatural b) {
-        DivisionByteNaturalAlgorithmResult result = algorithm.divide(a, b);
-        ByteNatural remainder = result.getRemainder();
-        return remainder.isZero();
+    public ByteNatural apply(ByteNatural dividend, ByteNatural divisor) {
+        DivisionByteNaturalAlgorithmResult result = algorithm.divide(dividend, divisor);
+        return result.getRemainder();
     }
 }

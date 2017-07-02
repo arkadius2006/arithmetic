@@ -3,17 +3,17 @@ package com.math.arithmetic.natural.internal;
 import com.math.BinaryRelation;
 import com.math.ComparisonFunction;
 import com.math.ComparisonResult;
-import com.math.arithmetic.natural.Natural;
+import com.math.arithmetic.natural.ByteNatural;
 
 /**
  * Created by arkadiy on 02/07/17.
  */
-public class EqualityNaturalBinaryRelation implements BinaryRelation<Natural> {
+public class EqualityByteNaturalBinaryRelation implements BinaryRelation<ByteNatural> {
 
-    private final ComparisonFunction<Natural> compare = new NaturalComparisonFunction();
+    private final ComparisonFunction<ByteNatural> compare = new ByteNaturalComparisonFunction();
 
     @Override
-    public boolean test(Natural a, Natural b) {
+    public boolean test(ByteNatural a, ByteNatural b) {
         ComparisonResult result = compare.apply(a, b);
 
         switch (result) {

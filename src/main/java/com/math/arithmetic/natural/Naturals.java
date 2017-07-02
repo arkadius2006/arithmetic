@@ -9,63 +9,63 @@ public class Naturals {
         throw new AssertionError("Cannot be instantiated");
     }
 
-    public static Natural of(byte value) {
+    public static ByteNatural of(byte value) {
         throw new UnsupportedOperationException();
     }
 
-    public static Natural of(int value) {
+    public static ByteNatural of(int value) {
         throw new UnsupportedOperationException();
     }
 
-    public static Natural of(long value) {
+    public static ByteNatural of(long value) {
         throw new UnsupportedOperationException();
     }
 
-    public static Natural ofDecimal(String value) throws NumberFormatException {
+    public static ByteNatural ofDecimal(String value) throws NumberFormatException {
         throw new UnsupportedOperationException();
     }
 
-    public static Natural ofBinary(String value) throws NumberFormatException {
+    public static ByteNatural ofBinary(String value) throws NumberFormatException {
         throw new UnsupportedOperationException();
     }
 
-    public static Natural ofHexidecimal(String value) throws NumberFormatException {
+    public static ByteNatural ofHexidecimal(String value) throws NumberFormatException {
         throw new UnsupportedOperationException();
     }
 
-    public static boolean isWithinByteRange(Natural value) {
+    public static boolean isWithinByteRange(ByteNatural value) {
         throw new UnsupportedOperationException();
     }
 
-    public static byte toByte(Natural value) throws ArithmeticException {
+    public static byte toByte(ByteNatural value) throws ArithmeticException {
         throw new UnsupportedOperationException();
     }
 
-    public static boolean isWithinIntRange(Natural value) {
+    public static boolean isWithinIntRange(ByteNatural value) {
         throw new UnsupportedOperationException();
     }
 
-    public static int toInt(Natural value) throws ArithmeticException {
+    public static int toInt(ByteNatural value) throws ArithmeticException {
         throw new UnsupportedOperationException();
     }
 
-    public static boolean isWithinLongRange(Natural value) {
+    public static boolean isWithinLongRange(ByteNatural value) {
         throw new UnsupportedOperationException();
     }
 
-    public static long toLong(Natural value) throws ArithmeticException {
+    public static long toLong(ByteNatural value) throws ArithmeticException {
         throw new UnsupportedOperationException();
     }
 
-    public static String toDecimal(Natural value) {
+    public static String toDecimal(ByteNatural value) {
         throw new UnsupportedOperationException();
     }
 
-    public static String toBinary(Natural value) {
+    public static String toBinary(ByteNatural value) {
         throw new UnsupportedOperationException();
     }
 
-    public static String toHexidecimal(Natural value) {
+    public static String toHexidecimal(ByteNatural value) {
         throw new UnsupportedOperationException();
     }
 }

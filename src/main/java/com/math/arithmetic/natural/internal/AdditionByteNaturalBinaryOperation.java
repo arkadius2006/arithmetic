@@ -1,17 +1,17 @@
 package com.math.arithmetic.natural.internal;
 
 import com.math.BinaryOperation;
-import com.math.arithmetic.natural.Natural;
+import com.math.arithmetic.natural.ByteNatural;
 
 import java.util.Arrays;
 
 /**
  * Created by arkadiy on 02/07/17.
  */
-public class AdditionNaturalBinaryOperation implements BinaryOperation<Natural> {
+public class AdditionByteNaturalBinaryOperation implements BinaryOperation<ByteNatural> {
 
     @Override
-    public Natural apply(Natural a, Natural b) {
+    public ByteNatural apply(ByteNatural a, ByteNatural b) {
         int an = a.getArrayLength();
         int bn = b.getArrayLength();
 
@@ -26,11 +26,11 @@ public class AdditionNaturalBinaryOperation implements BinaryOperation<Natural> 
         }
 
         if (overflow == 0) {
-            return new Natural(c);
+            return new ByteNatural(c);
         } else {
             byte[] res = Arrays.copyOf(c, c.length + 1);
             res[c.length] = 1;
-            return new Natural(res);
+            return new ByteNatural(res);
         }
     }
 }

@@ -2,15 +2,15 @@ package com.math.arithmetic.natural.internal;
 
 import com.math.ComparisonFunction;
 import com.math.ComparisonResult;
-import com.math.arithmetic.natural.Natural;
+import com.math.arithmetic.natural.ByteNatural;
 
 /**
  * Created by arkadiy on 02/07/17.
  */
-public class NaturalComparisonFunction implements ComparisonFunction<Natural> {
+public class ByteNaturalComparisonFunction implements ComparisonFunction<ByteNatural> {
 
     @Override
-    public ComparisonResult apply(Natural a, Natural b) {
+    public ComparisonResult apply(ByteNatural a, ByteNatural b) {
         int n = a.getArrayLength();
         int m = b.getArrayLength();
 
