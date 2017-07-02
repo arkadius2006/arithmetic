@@ -1,14 +1,14 @@
 package com.math.arithmetic.natural.internal;
 
 import com.math.BinaryOperation;
+import com.math.arithmetic.natural.Natural;
 
 import java.util.Arrays;
 
 /**
  * Created by arkadiy on 02/07/17.
  */
-public class AdditionByteNaturalBinaryOperation implements BinaryOperation<ByteNatural> {
-
+public class AdditionByteNaturalBinaryOperation implements BinaryOperation<Natural> {
     private final ByteNaturalArithmetic naturalArithmetic;
 
     public AdditionByteNaturalBinaryOperation(ByteNaturalArithmetic naturalArithmetic) {
@@ -16,7 +16,10 @@ public class AdditionByteNaturalBinaryOperation implements BinaryOperation<ByteN
     }
 
     @Override
-    public ByteNatural apply(ByteNatural a, ByteNatural b) {
+    public ByteNatural apply(Natural first, Natural second) {
+        ByteNatural a = naturalArithmetic.cast(first);
+        ByteNatural b = naturalArithmetic.cast(second);
+
         int an = a.getArrayLength();
         int bn = b.getArrayLength();
 

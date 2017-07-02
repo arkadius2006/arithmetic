@@ -1,5 +1,6 @@
 package com.math.arithmetic.natural.internal;
 
+import com.math.BinaryOperation;
 import com.math.BinaryRelation;
 import com.math.ComparisonFunction;
 import com.math.Relation;
@@ -8,8 +9,10 @@ import com.math.arithmetic.natural.NaturalArithmetic;
 import com.math.arithmetic.natural.base.IsEqualToNaturalBinaryRelation;
 import com.math.arithmetic.natural.base.IsGreaterThanNatualBinaryRelation;
 import com.math.arithmetic.natural.base.IsLessThanNaturalBinaryRelation;
+import com.math.arithmetic.natural.base.MultiplicationNaturalBinaryOperation;
+import com.math.arithmetic.natural.internal.algorithm.LongMultiplicationByteNaturalAlgorithm;
+import com.math.arithmetic.natural.MultiplicationNaturalAlgorithm;
 
-import java.util.function.BinaryOperator;
 
 /**
  * Created by arkadiy on 02/07/17.
@@ -21,14 +24,23 @@ public class ByteNaturalArithmetic implements NaturalArithmetic {
     private final BinaryRelation<Natural> isLessThanRelation;
     private final BinaryRelation<Natural> isEqualToRelation;
     private final BinaryRelation<Natural> isGreaterThanRelation;
-
+    private final BinaryOperation<Natural> additionOperation;
+    private final MultiplicationNaturalAlgorithm multiplicationAlgorithm;
+    private final MultiplicationNaturalBinaryOperation multiplicationOperation;
 
     public ByteNaturalArithmetic() {
         this.isZeroRelation = new IsZeroByteNaturalRelation(this);
+
         this.comparisonFunction = new ByteNaturalComparisonFunction(this);
         this.isLessThanRelation = new IsLessThanNaturalBinaryRelation(comparisonFunction);
         this.isEqualToRelation = new IsEqualToNaturalBinaryRelation(comparisonFunction);
         this.isGreaterThanRelation = new IsGreaterThanNatualBinaryRelation(comparisonFunction);
+
+        this.additionOperation = new AdditionByteNaturalBinaryOperation(this);
+
+        this.multiplicationAlgorithm = new LongMultiplicationByteNaturalAlgorithm(this);
+        this.multiplicationOperation = new MultiplicationNaturalBinaryOperation(multiplicationAlgorithm);
+
     }
 
     // factory method specific to this implementation
@@ -91,22 +103,22 @@ public class ByteNaturalArithmetic implements NaturalArithmetic {
     }
 
     @Override
-    public BinaryOperator<Natural> addition() {
+    public BinaryOperation<Natural> addition() {
+        return additionOperation;
+    }
+
+    @Override
+    public BinaryOperation<Natural> multiplication() {
+        return multiplicationOperation;
+    }
+
+    @Override
+    public BinaryOperation<Natural> quotient() {
         return null;
     }
 
     @Override
-    public BinaryOperator<Natural> multiplication() {
-        return null;
-    }
-
-    @Override
-    public BinaryOperator<Natural> quotient() {
-        return null;
-    }
-
-    @Override
-    public BinaryOperator<Natural> remainder() {
+    public BinaryOperation<Natural> remainder() {
         return null;
     }
 

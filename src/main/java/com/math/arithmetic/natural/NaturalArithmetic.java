@@ -1,10 +1,10 @@
 package com.math.arithmetic.natural;
 
+import com.math.BinaryOperation;
 import com.math.BinaryRelation;
 import com.math.ComparisonFunction;
 import com.math.Relation;
 
-import java.util.function.BinaryOperator;
 
 /**
  * Created by arkadiy on 02/07/17.
@@ -30,13 +30,13 @@ public interface NaturalArithmetic {
 
     BinaryRelation<Natural> isMultipleOf();
 
-    BinaryOperator<Natural> addition();
+    BinaryOperation<Natural> addition();
 
-    BinaryOperator<Natural> multiplication();
+    BinaryOperation<Natural> multiplication();
 
-    BinaryOperator<Natural> quotient();
+    BinaryOperation<Natural> quotient();
 
-    BinaryOperator<Natural> remainder();
+    BinaryOperation<Natural> remainder();
 
 
     // factory methods
