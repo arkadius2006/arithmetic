@@ -37,7 +37,7 @@ public class Naturals {
         throw new UnsupportedOperationException();
     }
 
-    public static byte toByte(Natural value) throws ByteOverflowException {
+    public static byte toByte(Natural value) throws ArithmeticException {
         throw new UnsupportedOperationException();
     }
 
@@ -45,7 +45,7 @@ public class Naturals {
         throw new UnsupportedOperationException();
     }
 
-    public static int toInt(Natural value) throws IntOverflowException {
+    public static int toInt(Natural value) throws ArithmeticException {
         throw new UnsupportedOperationException();
     }
 
@@ -53,7 +53,7 @@ public class Naturals {
         throw new UnsupportedOperationException();
     }
 
-    public static long toLong(Natural value) throws LongOverflowException {
+    public static long toLong(Natural value) throws ArithmeticException {
         throw new UnsupportedOperationException();
     }
 

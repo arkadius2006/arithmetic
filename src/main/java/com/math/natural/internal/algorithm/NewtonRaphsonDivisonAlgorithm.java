@@ -1,6 +1,5 @@
 package com.math.natural.internal.algorithm;
 
-import com.math.natural.DivisionByZeroException;
 import com.math.natural.Natural;
 
 /**
@@ -9,7 +8,7 @@ import com.math.natural.Natural;
 public class NewtonRaphsonDivisonAlgorithm implements DivisionAlgorithm {
 
     @Override
-    public DivisionAlgorithmResult divide(Natural dividend, Natural divisor) throws DivisionByZeroException {
+    public DivisionAlgorithmResult divide(Natural dividend, Natural divisor) throws ArithmeticException {
         throw new UnsupportedOperationException("Not implmented");
     }
 }

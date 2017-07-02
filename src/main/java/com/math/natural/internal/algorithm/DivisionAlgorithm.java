@@ -1,6 +1,5 @@
 package com.math.natural.internal.algorithm;
 
-import com.math.natural.DivisionByZeroException;
 import com.math.natural.Natural;
 
 /**
@@ -8,5 +7,5 @@ import com.math.natural.Natural;
  */
 public interface DivisionAlgorithm {
 
-    DivisionAlgorithmResult divide(Natural dividend, Natural divisor) throws DivisionByZeroException;
+    DivisionAlgorithmResult divide(Natural dividend, Natural divisor) throws ArithmeticException;
 }
