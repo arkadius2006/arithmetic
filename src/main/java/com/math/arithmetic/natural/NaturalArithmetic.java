@@ -8,7 +8,7 @@ import com.math.function.*;
  */
 public interface NaturalArithmetic {
 
-    // implementations are supported to override this method to return covariant type
+    // implementations are supposed to override this method to return covariant type
     Natural cast(Natural value);
 
     // relations and operations
