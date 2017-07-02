@@ -5,5 +5,5 @@ package com.math.function;
  */
 public interface BinaryOperation<T> {
 
-    T apply(T a, T b);
+    T apply(T operand1, T operand2);
 }

@@ -41,6 +41,10 @@ public interface NaturalArithmetic {
 
     BinaryOperation<Natural> remainder();
 
+    BinaryOperation<Natural> floor();
+
+    BinaryOperation<Natural> ceil();
+
     // special values
 
     Natural zero();

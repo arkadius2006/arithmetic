@@ -28,6 +28,9 @@ public class ByteNaturalArithmetic implements NaturalArithmetic {
     private final DivisionAlgorithm<Natural> divisionAlgorithm;
     private final BinaryOperation<Natural> quotientOperation;
     private final BinaryOperation<Natural> remainderOperation;
+    private final BinaryOperation<Natural> floorOperation;
+    private final BinaryOperation<Natural> ceilOperation;
+
     private final BinaryRelation<Natural> isDivisorOfRelation;
     private final BinaryRelation<Natural> isMultipleOfRelation;
 
@@ -59,6 +62,8 @@ public class ByteNaturalArithmetic implements NaturalArithmetic {
 
         this.quotientOperation = new QuotientBinaryOperation<Natural>(divisionAlgorithm);
         this.remainderOperation = new RemainderBinaryOperation<Natural>(divisionAlgorithm);
+        this.floorOperation = new FloorBinaryOperation<Natural>(divisionAlgorithm);
+        this.ceilOperation = new CeilBinaryOperation<Natural>(divisionAlgorithm);
         this.isDivisorOfRelation = new IsDivisorOfBinaryRelation<Natural>(remainderOperation, isZeroRelation);
         this.isMultipleOfRelation = new IsMultipleOfBinaryRelation<Natural>(remainderOperation, isZeroRelation);
     }
@@ -155,6 +160,16 @@ public class ByteNaturalArithmetic implements NaturalArithmetic {
     @Override
     public BinaryOperation<Natural> remainder() {
         return remainderOperation;
+    }
+
+    @Override
+    public BinaryOperation<Natural> floor() {
+        return floorOperation;
+    }
+
+    @Override
+    public BinaryOperation<Natural> ceil() {
+        return ceilOperation;
     }
 
     @Override
