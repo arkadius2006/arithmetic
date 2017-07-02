@@ -45,7 +45,7 @@ final class ByteNatural implements Natural {
     }
 
     @Override
-    public NaturalArithmetic getNaturalArithmetic() {
+    public ByteNaturalArithmetic getNaturalArithmetic() {
         return naturalArithmetic;
     }
 }

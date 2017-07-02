@@ -43,7 +43,7 @@ public interface WholeArithmetic {
 
     BinaryRelation<Whole> isEqualTo();
 
-    BinaryRelation<Whole> isGreaterThen();
+    BinaryRelation<Whole> isGreaterThan();
 
     ComparisonFunction<Whole> comparison();
 

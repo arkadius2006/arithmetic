@@ -1,5 +1,9 @@
 package com.math.arithmetic.natural.bytenatural;
 
+import com.math.arithmetic.common.IsEqualToBinaryRelation;
+import com.math.arithmetic.common.IsEqualToRelation;
+import com.math.arithmetic.common.IsGreaterThanBinaryRelation;
+import com.math.arithmetic.common.IsLessThanBinaryRelation;
 import com.math.arithmetic.natural.base.DivisionNaturalAlgorithm;
 import com.math.arithmetic.natural.Natural;
 import com.math.arithmetic.natural.NaturalArithmetic;
@@ -42,11 +46,11 @@ public class ByteNaturalArithmetic implements NaturalArithmetic {
         this.one = newValue(new byte[] {1});
 
         this.comparisonFunction = new ByteNaturalComparisonFunction(this);
-        this.isLessThanRelation = new IsLessThanNaturalBinaryRelation(comparisonFunction);
-        this.isEqualToRelation = new IsEqualToNaturalBinaryRelation(comparisonFunction);
-        this.isGreaterThanRelation = new IsGreaterThanNatualBinaryRelation(comparisonFunction);
+        this.isLessThanRelation = new IsLessThanBinaryRelation<Natural>(comparisonFunction);
+        this.isEqualToRelation = new IsEqualToBinaryRelation<Natural>(comparisonFunction);
+        this.isGreaterThanRelation = new IsGreaterThanBinaryRelation<Natural>(comparisonFunction);
 
-        this.isZeroRelation = new IsZeroNaturalRelation(isEqualToRelation, zero);
+        this.isZeroRelation = new IsEqualToRelation<Natural>(isEqualToRelation, zero);
 
         this.additionOperation = new AdditionByteNaturalBinaryOperation(this);
         this.substractionOperation = new SubstractionByteNaturalBinaryOperation(this);

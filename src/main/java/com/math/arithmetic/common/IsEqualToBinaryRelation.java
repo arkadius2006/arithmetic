@@ -1,22 +1,22 @@
-package com.math.arithmetic.natural.base;
+package com.math.arithmetic.common;
 
+import com.math.arithmetic.natural.Natural;
 import com.math.function.BinaryRelation;
 import com.math.function.ComparisonFunction;
-import com.math.arithmetic.natural.Natural;
 
 /**
  * Created by arkadiy on 02/07/17.
  */
-public class IsEqualToNaturalBinaryRelation implements BinaryRelation<Natural> {
-    private final ComparisonFunction<Natural> compare;
+public class IsEqualToBinaryRelation<T> implements BinaryRelation<T> {
+    private final ComparisonFunction<T> compare;
 
-    public IsEqualToNaturalBinaryRelation(ComparisonFunction<Natural> compare) {
+    public IsEqualToBinaryRelation(ComparisonFunction<T> compare) {
         this.compare = compare;
 
     }
 
     @Override
-    public boolean test(Natural a, Natural b) {
+    public boolean test(T a, T b) {
         ComparisonFunction.Result result = compare.apply(a, b);
 
         switch (result) {
