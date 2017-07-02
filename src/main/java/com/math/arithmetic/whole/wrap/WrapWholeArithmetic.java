@@ -27,6 +27,10 @@ public class WrapWholeArithmetic implements WholeArithmetic {
     private final Relation<Whole> isZeroRelation;
     private final Relation<Whole> isPositiveRelation;
 
+    private final Operation<Whole> negationOperation;
+    private final Operation<Whole> absOperation;
+
+
     public WrapWholeArithmetic(NaturalArithmetic naturalArithmetic) {
         this.naturalArithmetic = naturalArithmetic;
 
@@ -41,6 +45,10 @@ public class WrapWholeArithmetic implements WholeArithmetic {
         this.isNegativeRelation = new IsLessThanRelation<Whole>(isLessThanBinaryRelation, zeroValue);
         this.isZeroRelation = new IsEqualToRelation<Whole>(isEqualToBinaryRelation, zeroValue);
         this.isPositiveRelation = new IsGreaterThanRelation<Whole>(isGreaterThanBinaryRelation, zeroValue);
+
+        this.negationOperation = new NegationWrapWholeOperation(this);
+        this.absOperation = new AbsWrapWholeOperation(this);
+
     }
 
     // specific to this implementation
@@ -49,7 +57,7 @@ public class WrapWholeArithmetic implements WholeArithmetic {
     }
 
     @Override
-    public Whole cast(Whole whole) {
+    public WrapWhole cast(Whole whole) {
         if (whole == null) {
             throw new NullPointerException();
         }
@@ -94,12 +102,12 @@ public class WrapWholeArithmetic implements WholeArithmetic {
 
     @Override
     public Operation<Whole> negation() {
-        return null;
+        return negationOperation;
     }
 
     @Override
     public Operation<Whole> abs() {
-        return null;
+        return absOperation;
     }
 
     @Override
@@ -129,7 +137,7 @@ public class WrapWholeArithmetic implements WholeArithmetic {
 
     @Override
     public ComparisonFunction<Whole> comparison() {
-        return null;
+        return comparisonFunction;
     }
 
     @Override
