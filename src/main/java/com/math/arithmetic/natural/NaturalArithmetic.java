@@ -1,6 +1,6 @@
 package com.math.arithmetic.natural;
 
-import com.math.*;
+import com.math.function.*;
 
 
 /**

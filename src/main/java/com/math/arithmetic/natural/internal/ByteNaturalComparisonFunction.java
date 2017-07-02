@@ -1,6 +1,6 @@
 package com.math.arithmetic.natural.internal;
 
-import com.math.ComparisonFunction;
+import com.math.function.ComparisonFunction;
 import com.math.arithmetic.natural.Natural;
 
 /**

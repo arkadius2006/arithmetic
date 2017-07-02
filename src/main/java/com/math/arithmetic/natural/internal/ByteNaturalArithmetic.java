@@ -1,6 +1,5 @@
 package com.math.arithmetic.natural.internal;
 
-import com.math.*;
 import com.math.arithmetic.natural.DivisionNaturalAlgorithm;
 import com.math.arithmetic.natural.Natural;
 import com.math.arithmetic.natural.NaturalArithmetic;
@@ -8,6 +7,7 @@ import com.math.arithmetic.natural.base.*;
 import com.math.arithmetic.natural.internal.algorithm.LongMultiplicationByteNaturalAlgorithm;
 import com.math.arithmetic.natural.MultiplicationNaturalAlgorithm;
 import com.math.arithmetic.natural.internal.algorithm.NewtonRaphsonDivisonByteNaturalAlgorithm;
+import com.math.function.*;
 
 
 /**

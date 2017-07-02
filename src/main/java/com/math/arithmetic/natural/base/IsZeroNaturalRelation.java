@@ -1,7 +1,7 @@
 package com.math.arithmetic.natural.base;
 
-import com.math.BinaryRelation;
-import com.math.Relation;
+import com.math.function.BinaryRelation;
+import com.math.function.Relation;
 import com.math.arithmetic.natural.Natural;
 
 

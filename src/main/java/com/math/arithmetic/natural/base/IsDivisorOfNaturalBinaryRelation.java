@@ -1,11 +1,9 @@
 package com.math.arithmetic.natural.base;
 
-import com.math.BinaryOperation;
-import com.math.BinaryRelation;
-import com.math.Relation;
-import com.math.arithmetic.natural.DivisionNaturalAlgorithm;
+import com.math.function.BinaryOperation;
+import com.math.function.BinaryRelation;
+import com.math.function.Relation;
 import com.math.arithmetic.natural.Natural;
-import com.math.arithmetic.natural.internal.ByteNatural;
 
 /**
  * Created by arkadiy on 02/07/17.

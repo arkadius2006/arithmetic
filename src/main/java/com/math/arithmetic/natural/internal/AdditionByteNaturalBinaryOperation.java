@@ -1,6 +1,6 @@
 package com.math.arithmetic.natural.internal;
 
-import com.math.BinaryOperation;
+import com.math.function.BinaryOperation;
 import com.math.arithmetic.natural.Natural;
 
 import java.util.Arrays;
