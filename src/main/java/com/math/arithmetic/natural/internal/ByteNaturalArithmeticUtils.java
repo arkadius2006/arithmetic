@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * Created by arkadiy on 02/07/17.
  */
-public class ArithmeticUtils {
+public class ByteNaturalArithmeticUtils {
 
     public static byte[] normalize(byte[] a) {
         int n = a.length;

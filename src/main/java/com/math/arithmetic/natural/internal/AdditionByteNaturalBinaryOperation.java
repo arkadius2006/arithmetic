@@ -9,6 +9,12 @@ import java.util.Arrays;
  */
 public class AdditionByteNaturalBinaryOperation implements BinaryOperation<ByteNatural> {
 
+    private final ByteNaturalArithmetic naturalArithmetic;
+
+    public AdditionByteNaturalBinaryOperation(ByteNaturalArithmetic naturalArithmetic) {
+        this.naturalArithmetic = naturalArithmetic;
+    }
+
     @Override
     public ByteNatural apply(ByteNatural a, ByteNatural b) {
         int an = a.getArrayLength();
@@ -25,11 +31,11 @@ public class AdditionByteNaturalBinaryOperation implements BinaryOperation<ByteN
         }
 
         if (overflow == 0) {
-            return new ByteNatural(c);
+            return naturalArithmetic.newValue(c);
         } else {
             byte[] res = Arrays.copyOf(c, c.length + 1);
             res[c.length] = 1;
-            return new ByteNatural(res);
+            return naturalArithmetic.newValue(res);
         }
     }
 }

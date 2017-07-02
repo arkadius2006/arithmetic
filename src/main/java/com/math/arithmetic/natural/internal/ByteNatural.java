@@ -1,24 +1,31 @@
 package com.math.arithmetic.natural.internal;
 
-import com.math.arithmetic.natural.internal.ArithmeticUtils;
+import com.math.arithmetic.natural.Natural;
+import com.math.arithmetic.natural.NaturalArithmetic;
 
 /**
  * 0, 1, 2, ...
  */
-public class ByteNatural {
+public class ByteNatural implements Natural {
+    private final ByteNaturalArithmetic naturalArithmetic;
+
     // bytes are interpretered as unsigned values, e.g. from 0 to 255
     // a[0] is lowest byte, a[a.length - 1] is the most significant
     // i.e. value = a[0] + 256 * a[1] + 256^2 * a[2] + ...
     private final byte[] a;
 
     // todo enforce package private access
-    public ByteNatural(final byte[] inputArray) { // todo optimization: provide several implementations of Natural in case of 1, 2, 4, > 4 bytes long
+    public ByteNatural(ByteNaturalArithmetic naturalArithmetic, final byte[] inputArray) { // todo optimization: provide several implementations of Natural in case of 1, 2, 4, > 4 bytes long
+        if (naturalArithmetic == null) {
+            throw new NullPointerException();
+        }
+
         if (inputArray == null) {
             throw new NullPointerException();
         }
 
-        // no defensive copying since constructor is package visible
-        this.a = ArithmeticUtils.normalize(inputArray);
+        this.naturalArithmetic = naturalArithmetic;
+        this.a = ByteNaturalArithmeticUtils.normalize(inputArray); // no defensive copying since constructor is package visible
     }
 
     public boolean isZero() {
@@ -39,5 +46,10 @@ public class ByteNatural {
         } else {
             return 0;
         }
+    }
+
+    @Override
+    public NaturalArithmetic getNaturalArithmetic() {
+        return naturalArithmetic;
     }
 }

@@ -1,17 +1,23 @@
-package com.math.arithmetic.natural.internal;
+package com.math.arithmetic.natural.base;
 
 import com.math.BinaryRelation;
 import com.math.ComparisonFunction;
 import com.math.ComparisonResult;
+import com.math.arithmetic.natural.Natural;
 
 /**
  * Created by arkadiy on 02/07/17.
  */
-public class GreaterByteNatualBinaryRelation implements BinaryRelation<ByteNatural> {
-    private final ComparisonFunction<ByteNatural> compare = new ByteNaturalComparisonFunction();
+public class IsGreaterThanNatualBinaryRelation implements BinaryRelation<Natural> {
+    private final ComparisonFunction<Natural> compare;
+
+    public IsGreaterThanNatualBinaryRelation(ComparisonFunction<Natural> compare) {
+        this.compare = compare;
+
+    }
 
     @Override
-    public boolean test(ByteNatural a, ByteNatural b) {
+    public boolean test(Natural a, Natural b) {
         ComparisonResult result = compare.apply(a, b);
 
         switch (result) {
@@ -27,3 +33,4 @@ public class GreaterByteNatualBinaryRelation implements BinaryRelation<ByteNatur
 
     }
 }
+

@@ -1,6 +1,7 @@
 package com.math.arithmetic.natural;
 
 import com.math.BinaryRelation;
+import com.math.ComparisonFunction;
 import com.math.Relation;
 
 import java.util.function.BinaryOperator;
@@ -9,6 +10,9 @@ import java.util.function.BinaryOperator;
  * Created by arkadiy on 02/07/17.
  */
 public interface NaturalArithmetic {
+
+    // implementations are supported to override this method to return covariant type
+    Natural cast(Natural value);
 
     // relations and operations
 
@@ -19,6 +23,8 @@ public interface NaturalArithmetic {
     BinaryRelation<Natural> isEqualTo();
 
     BinaryRelation<Natural> isGreaterThan();
+
+    ComparisonFunction<Natural> comparison();
 
     BinaryRelation<Natural> isDivisorOf();
 
