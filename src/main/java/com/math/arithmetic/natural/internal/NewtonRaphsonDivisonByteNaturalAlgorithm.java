@@ -1,4 +1,4 @@
-package com.math.arithmetic.natural.internal.algorithm;
+package com.math.arithmetic.natural.internal;
 
 import com.math.arithmetic.natural.base.DivisionNaturalAlgorithm;
 import com.math.arithmetic.natural.Natural;
