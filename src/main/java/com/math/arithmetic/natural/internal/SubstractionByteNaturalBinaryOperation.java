@@ -2,7 +2,6 @@ package com.math.arithmetic.natural.internal;
 
 import com.math.BinaryOperation;
 import com.math.ComparisonFunction;
-import com.math.ComparisonResult;
 import com.math.arithmetic.natural.Natural;
 
 /**
@@ -22,9 +21,9 @@ public class SubstractionByteNaturalBinaryOperation implements BinaryOperation<N
         ByteNatural a = naturalArithmetic.cast(first);
         ByteNatural b = naturalArithmetic.cast(second);
 
-        ComparisonResult comparisonResult = comparisonFunction.apply(a, b);
+        ComparisonFunction.Result result = comparisonFunction.apply(a, b);
 
-        switch (comparisonResult) {
+        switch (result) {
             case IS_LESS_THAN:
                 throw new ArithmeticException("Cannot substract: first value is less than second");
         }

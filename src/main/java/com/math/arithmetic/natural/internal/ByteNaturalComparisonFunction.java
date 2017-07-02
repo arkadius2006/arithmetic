@@ -1,7 +1,6 @@
 package com.math.arithmetic.natural.internal;
 
 import com.math.ComparisonFunction;
-import com.math.ComparisonResult;
 import com.math.arithmetic.natural.Natural;
 
 /**
@@ -15,7 +14,7 @@ public class ByteNaturalComparisonFunction implements ComparisonFunction<Natural
     }
 
     @Override
-    public ComparisonResult apply(Natural first, Natural second) {
+    public Result apply(Natural first, Natural second) {
         ByteNatural a = naturalArithmetic.cast(first);
         ByteNatural b = naturalArithmetic.cast(second);
 
@@ -23,9 +22,9 @@ public class ByteNaturalComparisonFunction implements ComparisonFunction<Natural
         int m = b.getArrayLength();
 
         if (n < m) {
-            return ComparisonResult.IS_LESS_THAN;
+            return Result.IS_LESS_THAN;
         } else if (n > m) {
-            return ComparisonResult.IS_GREATER_THAN;
+            return Result.IS_GREATER_THAN;
         }
 
         for (int i = n - 1; i >= 0; --i) {
@@ -33,12 +32,12 @@ public class ByteNaturalComparisonFunction implements ComparisonFunction<Natural
             byte bi = b.getElement(i);
 
             if (ai < bi) {
-                return ComparisonResult.IS_LESS_THAN;
+                return Result.IS_LESS_THAN;
             } else if (ai > bi) {
-                return ComparisonResult.IS_GREATER_THAN;
+                return Result.IS_GREATER_THAN;
             }
         }
 
-        return ComparisonResult.IS_EQUAL_TO;
+        return Result.IS_EQUAL_TO;
     }
 }

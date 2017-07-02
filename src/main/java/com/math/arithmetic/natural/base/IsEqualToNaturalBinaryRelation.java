@@ -2,7 +2,6 @@ package com.math.arithmetic.natural.base;
 
 import com.math.BinaryRelation;
 import com.math.ComparisonFunction;
-import com.math.ComparisonResult;
 import com.math.arithmetic.natural.Natural;
 
 /**
@@ -18,7 +17,7 @@ public class IsEqualToNaturalBinaryRelation implements BinaryRelation<Natural> {
 
     @Override
     public boolean test(Natural a, Natural b) {
-        ComparisonResult result = compare.apply(a, b);
+        ComparisonFunction.Result result = compare.apply(a, b);
 
         switch (result) {
             case IS_LESS_THAN:
