@@ -6,7 +6,7 @@ import com.math.arithmetic.natural.Natural;
 /**
  * Created by arkadiy on 02/07/17.
  */
-public class NewtonRaphsonDivisonByteNaturalAlgorithm implements DivisionNaturalAlgorithm {
+class NewtonRaphsonDivisonByteNaturalAlgorithm implements DivisionNaturalAlgorithm {
     private final ByteNaturalArithmetic naturalArithmetic;
 
     public NewtonRaphsonDivisonByteNaturalAlgorithm(ByteNaturalArithmetic naturalArithmetic) {

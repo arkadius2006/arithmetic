@@ -6,7 +6,7 @@ import com.math.arithmetic.natural.Natural;
 /**
  * Created by arkadiy on 02/07/17.
  */
-public class ByteNaturalComparisonFunction implements ComparisonFunction<Natural> {
+class ByteNaturalComparisonFunction implements ComparisonFunction<Natural> {
     private final ByteNaturalArithmetic naturalArithmetic;
 
     public ByteNaturalComparisonFunction(ByteNaturalArithmetic naturalArithmetic) {

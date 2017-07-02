@@ -7,7 +7,7 @@ import com.math.arithmetic.natural.Natural;
 /**
  * Created by arkadiy on 02/07/17.
  */
-public class SubstractionByteNaturalBinaryOperation implements BinaryOperation<Natural> {
+class SubstractionByteNaturalBinaryOperation implements BinaryOperation<Natural> {
     private final ByteNaturalArithmetic naturalArithmetic;
     private final ComparisonFunction<Natural> comparisonFunction;
 

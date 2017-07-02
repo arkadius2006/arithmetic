@@ -6,7 +6,7 @@ import com.math.arithmetic.natural.Natural;
 /**
  * Created by arkadiy on 02/07/17.
  */
-public class LongMultiplicationByteNaturalAlgorithm implements MultiplicationNaturalAlgorithm {
+class LongMultiplicationByteNaturalAlgorithm implements MultiplicationNaturalAlgorithm {
     private final ByteNaturalArithmetic naturalArithmetic;
 
     public LongMultiplicationByteNaturalAlgorithm(ByteNaturalArithmetic naturalArithmetic) {
