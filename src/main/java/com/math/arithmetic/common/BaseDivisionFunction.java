@@ -1,7 +1,5 @@
 package com.math.arithmetic.common;
 
-import com.math.arithmetic.DivisionFunction;
-
 /**
  * Created by arkadiy on 02/07/17.
  */

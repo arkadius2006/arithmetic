@@ -1,4 +1,4 @@
-package com.math.arithmetic;
+package com.math.arithmetic.common;
 
 import com.math.function.BinaryFunction;
 

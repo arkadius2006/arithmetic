@@ -1,6 +1,6 @@
 package com.math.arithmetic.whole.wrap;
 
-import com.math.arithmetic.DivisionFunction;
+import com.math.arithmetic.common.DivisionFunction;
 import com.math.arithmetic.common.IsEqualToBinaryRelation;
 import com.math.arithmetic.common.IsGreaterThanBinaryRelation;
 import com.math.arithmetic.common.IsLessThanBinaryRelation;

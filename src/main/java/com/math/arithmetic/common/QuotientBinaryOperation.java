@@ -1,6 +1,5 @@
 package com.math.arithmetic.common;
 
-import com.math.arithmetic.DivisionFunction;
 import com.math.function.BinaryOperation;
 
 /**

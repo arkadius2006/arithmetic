@@ -1,6 +1,6 @@
 package com.math.arithmetic.whole;
 
-import com.math.arithmetic.DivisionFunction;
+import com.math.arithmetic.common.DivisionFunction;
 import com.math.function.*;
 
 
