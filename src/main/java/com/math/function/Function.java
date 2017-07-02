@@ -5,5 +5,5 @@ package com.math.function;
  */
 public interface Function<T, R> {
 
-    R apply(T t);
+    R apply(T operand);
 }

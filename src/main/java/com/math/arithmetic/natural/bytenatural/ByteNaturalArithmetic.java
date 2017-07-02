@@ -47,12 +47,12 @@ public class ByteNaturalArithmetic implements NaturalArithmetic {
         this.isEqualToRelation = new IsEqualToBinaryRelation<Natural>(comparisonFunction);
         this.isGreaterThanRelation = new IsGreaterThanBinaryRelation<Natural>(comparisonFunction);
 
-        this.isZeroRelation = new IsEqualToRelation<Natural>(isEqualToRelation, zero);
+        this.isZeroRelation = new ReducedBySecondOperandBinaryRelation<Natural>(isEqualToRelation, zero);
 
         this.additionOperation = new AdditionByteNaturalBinaryOperation(this);
         this.substractionOperation = new SubstractionByteNaturalBinaryOperation(this);
-        this.incrementOperation = new IncrementOperation<Natural>(additionOperation, one);
-        this.decrementOperation = new DecrementOperation<Natural>(substractionOperation, one);
+        this.incrementOperation = new ReducedBySecondOperandBinaryOperation<Natural>(additionOperation, one);
+        this.decrementOperation = new ReducedBySecondOperandBinaryOperation<Natural>(substractionOperation, one);
 
         this.multiplicationAlgorithm = new LongMultiplicationByteAlgorithm(this);
         this.multiplicationOperation = new MultiplicationBinaryOperation<Natural>(multiplicationAlgorithm);

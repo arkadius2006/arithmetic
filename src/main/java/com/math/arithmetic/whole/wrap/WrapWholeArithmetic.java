@@ -42,9 +42,9 @@ public class WrapWholeArithmetic implements WholeArithmetic {
         this.isEqualToBinaryRelation = new IsEqualToBinaryRelation<Whole>(comparisonFunction);
         this.isGreaterThanBinaryRelation = new IsGreaterThanBinaryRelation<Whole>(comparisonFunction);
 
-        this.isNegativeRelation = new IsLessThanRelation<Whole>(isLessThanBinaryRelation, zeroValue);
-        this.isZeroRelation = new IsEqualToRelation<Whole>(isEqualToBinaryRelation, zeroValue);
-        this.isPositiveRelation = new IsGreaterThanRelation<Whole>(isGreaterThanBinaryRelation, zeroValue);
+        this.isNegativeRelation = new ReducedBySecondOperandBinaryRelation<Whole>(isLessThanBinaryRelation, zeroValue);
+        this.isZeroRelation = new ReducedBySecondOperandBinaryRelation<Whole>(isEqualToBinaryRelation, zeroValue);
+        this.isPositiveRelation = new ReducedBySecondOperandBinaryRelation<Whole>(isGreaterThanBinaryRelation, zeroValue);
 
         this.negationOperation = new NegationWrapWholeOperation(this);
         this.absOperation = new AbsWrapWholeOperation(this);
