@@ -1,15 +1,15 @@
 package com.math.arithmetic.natural.bytenatural;
 
-import com.math.arithmetic.natural.base.MultiplicationNaturalAlgorithm;
+import com.math.arithmetic.common.MultiplicationAlgorithm;
 import com.math.arithmetic.natural.Natural;
 
 /**
  * Created by arkadiy on 02/07/17.
  */
-class LongMultiplicationByteNaturalAlgorithm implements MultiplicationNaturalAlgorithm {
+class LongMultiplicationByteAlgorithm implements MultiplicationAlgorithm<Natural> {
     private final ByteNaturalArithmetic naturalArithmetic;
 
-    public LongMultiplicationByteNaturalAlgorithm(ByteNaturalArithmetic naturalArithmetic) {
+    public LongMultiplicationByteAlgorithm(ByteNaturalArithmetic naturalArithmetic) {
         this.naturalArithmetic = naturalArithmetic;
     }
 

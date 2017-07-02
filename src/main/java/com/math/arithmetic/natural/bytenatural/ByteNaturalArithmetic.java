@@ -1,14 +1,9 @@
 package com.math.arithmetic.natural.bytenatural;
 
-import com.math.arithmetic.common.IsEqualToBinaryRelation;
-import com.math.arithmetic.common.IsEqualToRelation;
-import com.math.arithmetic.common.IsGreaterThanBinaryRelation;
-import com.math.arithmetic.common.IsLessThanBinaryRelation;
-import com.math.arithmetic.natural.base.DivisionNaturalAlgorithm;
+import com.math.arithmetic.DivisionFunction;
+import com.math.arithmetic.common.*;
 import com.math.arithmetic.natural.Natural;
 import com.math.arithmetic.natural.NaturalArithmetic;
-import com.math.arithmetic.natural.base.*;
-import com.math.arithmetic.natural.base.MultiplicationNaturalAlgorithm;
 import com.math.function.*;
 
 
@@ -28,10 +23,12 @@ public class ByteNaturalArithmetic implements NaturalArithmetic {
     private final Operation<Natural> decrementOperation;
 
 
-    private final MultiplicationNaturalAlgorithm multiplicationAlgorithm;
-    private final MultiplicationNaturalBinaryOperation multiplicationOperation;
+    private final MultiplicationAlgorithm<Natural> multiplicationAlgorithm;
+    private final BinaryOperation<Natural> multiplicationOperation;
 
-    private final DivisionNaturalAlgorithm divisionAlgorithm;
+    private final DivisionFunction<Natural> divisionFunction;
+
+    private final DivisionAlgorithm<Natural> divisionAlgorithm;
     private final BinaryOperation<Natural> quotientOperation;
     private final BinaryOperation<Natural> remainderOperation;
     private final BinaryRelation<Natural> isDivisorOfRelation;
@@ -54,17 +51,21 @@ public class ByteNaturalArithmetic implements NaturalArithmetic {
 
         this.additionOperation = new AdditionByteNaturalBinaryOperation(this);
         this.substractionOperation = new SubstractionByteNaturalBinaryOperation(this);
-        this.incrementOperation = new IncrementNaturalOperation(additionOperation, one);
-        this.decrementOperation = new DecrementNaturalOperation(substractionOperation, one);
+        this.incrementOperation = new IncrementOperation<Natural>(additionOperation, one);
+        this.decrementOperation = new DecrementOperation<Natural>(substractionOperation, one);
 
-        this.multiplicationAlgorithm = new LongMultiplicationByteNaturalAlgorithm(this);
-        this.multiplicationOperation = new MultiplicationNaturalBinaryOperation(multiplicationAlgorithm);
+        this.multiplicationAlgorithm = new LongMultiplicationByteAlgorithm(this);
+        this.multiplicationOperation = new MultiplicationBinaryOperation<Natural>(multiplicationAlgorithm);
 
-        this.divisionAlgorithm = new NewtonRaphsonDivisonByteNaturalAlgorithm(this);
-        this.quotientOperation = new QuotientNaturalBinaryOperation(divisionAlgorithm);
-        this.remainderOperation = new RemainderNaturalBinaryOperation(divisionAlgorithm);
-        this.isDivisorOfRelation = new IsDivisorOfNaturalBinaryRelation(remainderOperation, isZeroRelation);
-        this.isMultipleOfRelation = new IsMultipleOfNaturalBinaryRelation(remainderOperation, isZeroRelation);
+
+        this.divisionAlgorithm = new NewtonRaphsonDivisonByteAlgorithm(this);
+
+        this.divisionFunction = new BaseDivisionFunction<Natural>(divisionAlgorithm);
+
+        this.quotientOperation = new QuotientBinaryOperation<Natural>(divisionFunction);
+        this.remainderOperation = new RemainderBinaryOperation<Natural>(divisionFunction);
+        this.isDivisorOfRelation = new IsDivisorOfBinaryRelation<Natural>(remainderOperation, isZeroRelation);
+        this.isMultipleOfRelation = new IsMultipleOfBinaryRelation<Natural>(remainderOperation, isZeroRelation);
     }
 
     // factory method specific to this implementation

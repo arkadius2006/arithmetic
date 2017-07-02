@@ -1,15 +1,15 @@
 package com.math.arithmetic.natural.bytenatural;
 
-import com.math.arithmetic.natural.base.DivisionNaturalAlgorithm;
+import com.math.arithmetic.common.DivisionAlgorithm;
 import com.math.arithmetic.natural.Natural;
 
 /**
  * Created by arkadiy on 02/07/17.
  */
-class NewtonRaphsonDivisonByteNaturalAlgorithm implements DivisionNaturalAlgorithm {
+class NewtonRaphsonDivisonByteAlgorithm implements DivisionAlgorithm<Natural> {
     private final ByteNaturalArithmetic naturalArithmetic;
 
-    public NewtonRaphsonDivisonByteNaturalAlgorithm(ByteNaturalArithmetic naturalArithmetic) {
+    public NewtonRaphsonDivisonByteAlgorithm(ByteNaturalArithmetic naturalArithmetic) {
         this.naturalArithmetic = naturalArithmetic;
     }
 
