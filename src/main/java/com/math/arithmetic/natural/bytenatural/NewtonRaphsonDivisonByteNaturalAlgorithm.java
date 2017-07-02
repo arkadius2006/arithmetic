@@ -1,8 +1,7 @@
-package com.math.arithmetic.natural.internal;
+package com.math.arithmetic.natural.bytenatural;
 
 import com.math.arithmetic.natural.base.DivisionNaturalAlgorithm;
 import com.math.arithmetic.natural.Natural;
-import com.math.arithmetic.natural.internal.ByteNaturalArithmetic;
 
 /**
  * Created by arkadiy on 02/07/17.

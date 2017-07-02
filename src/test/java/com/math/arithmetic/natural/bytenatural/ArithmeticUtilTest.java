@@ -1,4 +1,4 @@
-package com.math.arithmetic.natural.internal;
+package com.math.arithmetic.natural.bytenatural;
 
 import org.junit.Assert;
 import org.junit.Test;

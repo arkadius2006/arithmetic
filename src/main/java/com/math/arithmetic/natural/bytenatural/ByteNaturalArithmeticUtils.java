@@ -1,4 +1,4 @@
-package com.math.arithmetic.natural.internal;
+package com.math.arithmetic.natural.bytenatural;
 
 import java.util.Arrays;
 

@@ -1,9 +1,7 @@
-package com.math.arithmetic.natural.internal;
+package com.math.arithmetic.natural.bytenatural;
 
 import com.math.arithmetic.natural.base.MultiplicationNaturalAlgorithm;
 import com.math.arithmetic.natural.Natural;
-import com.math.arithmetic.natural.internal.ByteNatural;
-import com.math.arithmetic.natural.internal.ByteNaturalArithmetic;
 
 /**
  * Created by arkadiy on 02/07/17.

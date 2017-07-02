@@ -1,4 +1,4 @@
-package com.math.arithmetic.natural.internal;
+package com.math.arithmetic.natural.bytenatural;
 
 import com.math.function.BinaryOperation;
 import com.math.function.ComparisonFunction;
