@@ -1,7 +1,6 @@
 package com.math.arithmetic.natural.internal;
 
 import com.math.BinaryOperation;
-import com.math.arithmetic.natural.ByteNatural;
 import com.math.arithmetic.natural.internal.algorithm.MultiplicationByteNaturalAlgorithm;
 
 

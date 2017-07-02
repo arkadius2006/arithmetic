@@ -1,4 +1,4 @@
-package com.math.arithmetic.natural;
+package com.math.arithmetic.natural.internal;
 
 import com.math.BinaryRelation;
 import com.math.Relation;
@@ -8,7 +8,7 @@ import java.util.function.BinaryOperator;
 /**
  * Created by arkadiy on 02/07/17.
  */
-public interface NaturalArithmetic {
+public interface ByteNaturalArithmetic {
 
     Relation<ByteNatural> isZero();
 

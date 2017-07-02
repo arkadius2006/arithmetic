@@ -1,7 +1,6 @@
 package com.math.arithmetic.natural.internal;
 
 import com.math.Relation;
-import com.math.arithmetic.natural.ByteNatural;
 
 
 /**

@@ -2,7 +2,6 @@ package com.math.arithmetic.natural.internal;
 
 import com.math.ComparisonFunction;
 import com.math.ComparisonResult;
-import com.math.arithmetic.natural.ByteNatural;
 
 /**
  * Created by arkadiy on 02/07/17.

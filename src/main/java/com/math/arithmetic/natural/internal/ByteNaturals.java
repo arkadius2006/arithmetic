@@ -1,11 +1,11 @@
-package com.math.arithmetic.natural;
+package com.math.arithmetic.natural.internal;
 
 /**
  * Provide convertion method between Natural and primitive number classes as well as strings with 2, 10, 16 radix
  */
-public class Naturals {
+public class ByteNaturals {
 
-    private Naturals() {
+    private ByteNaturals() {
         throw new AssertionError("Cannot be instantiated");
     }
 
