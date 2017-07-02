@@ -1,6 +1,8 @@
 package com.math.arithmetic.natural.internal;
 
 import com.math.BinaryRelation;
+import com.math.ComparisonFunction;
+import com.math.ComparisonResult;
 import com.math.arithmetic.natural.Natural;
 
 /**
@@ -8,28 +10,21 @@ import com.math.arithmetic.natural.Natural;
  */
 public class LessNaturalBinaryRelation implements BinaryRelation<Natural> {
 
+    private final ComparisonFunction<Natural> compare = new NaturalComparisonFunction();
+
     @Override
     public boolean test(Natural a, Natural b) {
-        int n = a.getArrayLength();
-        int m = b.getArrayLength();
+        ComparisonResult result = compare.apply(a, b);
 
-        if (n < m) {
-            return true;
-        } else if (n > m) {
-            return false;
-        }
-
-        for (int i = n - 1; i >= 0; --i) {
-            byte ai = a.getElement(i);
-            byte bi = b.getElement(i);
-
-            if (ai < bi) {
+        switch (result) {
+            case IS_LESS_THAN:
                 return true;
-            } else if (ai > bi) {
+            case IS_EQUAL_TO:
                 return false;
-            }
+            case IS_GREATER_THAN:
+                return false;
+            default:
+                throw new AssertionError();
         }
-
-        return false;
     }
 }
