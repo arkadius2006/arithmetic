@@ -6,7 +6,7 @@ import org.junit.Test;
 /**
  * Created by arkadiy on 02/07/17.
  */
-public class ArithmeticUtilTest {
+public class ByteNaturalArithmeticUtilsTest {
 
     @Test
     public void emptyArray() {
