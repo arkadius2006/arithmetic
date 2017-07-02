@@ -30,6 +30,8 @@ public class ByteNaturalArithmetic implements NaturalArithmetic {
     private final BinaryOperation<Natural> remainderOperation;
     private final BinaryOperation<Natural> floorOperation;
     private final BinaryOperation<Natural> ceilOperation;
+    private final BinaryOperation<Natural> greatestCommonDiviserBinaryOperation;
+    private final BinaryOperation<Natural> leastCommonMultipleBinaryOperation;
 
     private final BinaryRelation<Natural> isDivisorOfRelation;
     private final BinaryRelation<Natural> isMultipleOfRelation;
@@ -64,6 +66,8 @@ public class ByteNaturalArithmetic implements NaturalArithmetic {
         this.remainderOperation = new RemainderBinaryOperation<Natural>(divisionAlgorithm);
         this.floorOperation = new FloorBinaryOperation<Natural>(divisionAlgorithm);
         this.ceilOperation = new CeilBinaryOperation<Natural>(divisionAlgorithm);
+        this.greatestCommonDiviserBinaryOperation = new GreatestCommonDiviserBinaryOperation<Natural>(divisionAlgorithm);
+        this.leastCommonMultipleBinaryOperation = new LeastCommonMultipleBinaryOperation<Natural>(divisionAlgorithm);
         this.isDivisorOfRelation = new IsDivisorOfBinaryRelation<Natural>(remainderOperation, isZeroRelation);
         this.isMultipleOfRelation = new IsMultipleOfBinaryRelation<Natural>(remainderOperation, isZeroRelation);
     }
@@ -170,6 +174,16 @@ public class ByteNaturalArithmetic implements NaturalArithmetic {
     @Override
     public BinaryOperation<Natural> ceil() {
         return ceilOperation;
+    }
+
+    @Override
+    public BinaryOperation<Natural> gcd() {
+        return greatestCommonDiviserBinaryOperation;
+    }
+
+    @Override
+    public BinaryOperation<Natural> lcm() {
+        return leastCommonMultipleBinaryOperation;
     }
 
     @Override

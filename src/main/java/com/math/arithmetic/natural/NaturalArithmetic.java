@@ -45,6 +45,10 @@ public interface NaturalArithmetic {
 
     BinaryOperation<Natural> ceil();
 
+    BinaryOperation<Natural> gcd();
+
+    BinaryOperation<Natural> lcm();
+
     // special values
 
     Natural zero();
