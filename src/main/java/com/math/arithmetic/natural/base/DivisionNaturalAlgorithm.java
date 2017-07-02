@@ -7,7 +7,7 @@ import com.math.arithmetic.natural.Natural;
  */
 public interface DivisionNaturalAlgorithm {
 
-    Result divide(Natural dividend, Natural divisor) throws ArithmeticException;
+    public Result divide(Natural dividend, Natural divisor) throws ArithmeticException;
 
     public static class Result {
         public Natural quotient;
