@@ -1,7 +1,7 @@
-package com.math.natural.internal;
+package com.math.arithmetic.natural.internal;
 
 import com.math.BinaryRelation;
-import com.math.natural.Natural;
+import com.math.arithmetic.natural.Natural;
 
 /**
  * Created by arkadiy on 02/07/17.

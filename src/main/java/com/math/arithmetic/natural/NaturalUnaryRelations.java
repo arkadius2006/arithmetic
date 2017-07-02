@@ -1,7 +1,7 @@
-package com.math.natural;
+package com.math.arithmetic.natural;
 
 import com.math.UnaryRelation;
-import com.math.natural.internal.ZeroNaturalUnaryRelation;
+import com.math.arithmetic.natural.internal.ZeroNaturalUnaryRelation;
 
 /**
  * Created by arkadiy on 02/07/17.

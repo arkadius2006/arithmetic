@@ -1,6 +1,6 @@
-package com.math.natural;
+package com.math.arithmetic.natural;
 
-import com.math.natural.internal.ArithmeticUtils;
+import com.math.arithmetic.natural.internal.ArithmeticUtils;
 
 /**
  * 0, 1, 2, ...

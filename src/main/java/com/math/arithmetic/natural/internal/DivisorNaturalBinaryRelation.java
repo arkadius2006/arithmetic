@@ -1,9 +1,9 @@
-package com.math.natural.internal;
+package com.math.arithmetic.natural.internal;
 
 import com.math.BinaryRelation;
-import com.math.natural.internal.algorithm.DivisionAlgorithm;
-import com.math.natural.internal.algorithm.DivisionAlgorithmResult;
-import com.math.natural.Natural;
+import com.math.arithmetic.natural.internal.algorithm.DivisionAlgorithm;
+import com.math.arithmetic.natural.internal.algorithm.DivisionAlgorithmResult;
+import com.math.arithmetic.natural.Natural;
 
 /**
  * Created by arkadiy on 02/07/17.

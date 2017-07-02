@@ -1,14 +1,14 @@
-package com.math.natural;
+package com.math.arithmetic.natural;
 
 import com.math.BinaryOperation;
-import com.math.natural.internal.algorithm.DivisionAlgorithm;
-import com.math.natural.internal.algorithm.LongMultiplicationAlgorithm;
-import com.math.natural.internal.algorithm.MultiplicationAlgorithm;
-import com.math.natural.internal.algorithm.NewtonRaphsonDivisonAlgorithm;
-import com.math.natural.internal.AdditionNaturalBinaryOperation;
-import com.math.natural.internal.MultiplicationNaturalBinaryOperation;
-import com.math.natural.internal.QuotientNatualBinaryOperation;
-import com.math.natural.internal.RemainderNaturalBinaryOperation;
+import com.math.arithmetic.natural.internal.algorithm.DivisionAlgorithm;
+import com.math.arithmetic.natural.internal.algorithm.LongMultiplicationAlgorithm;
+import com.math.arithmetic.natural.internal.algorithm.MultiplicationAlgorithm;
+import com.math.arithmetic.natural.internal.algorithm.NewtonRaphsonDivisonAlgorithm;
+import com.math.arithmetic.natural.internal.AdditionNaturalBinaryOperation;
+import com.math.arithmetic.natural.internal.MultiplicationNaturalBinaryOperation;
+import com.math.arithmetic.natural.internal.QuotientNatualBinaryOperation;
+import com.math.arithmetic.natural.internal.RemainderNaturalBinaryOperation;
 
 /**
  * Created by arkadiy on 02/07/17.

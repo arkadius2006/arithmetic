@@ -1,9 +1,9 @@
-package com.math.natural;
+package com.math.arithmetic.natural;
 
 import com.math.BinaryRelation;
-import com.math.natural.internal.algorithm.DivisionAlgorithm;
-import com.math.natural.internal.algorithm.NewtonRaphsonDivisonAlgorithm;
-import com.math.natural.internal.*;
+import com.math.arithmetic.natural.internal.algorithm.DivisionAlgorithm;
+import com.math.arithmetic.natural.internal.algorithm.NewtonRaphsonDivisonAlgorithm;
+import com.math.arithmetic.natural.internal.*;
 
 /**
  * Created by arkadiy on 02/07/17.

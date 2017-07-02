@@ -1,7 +1,7 @@
-package com.math.natural.internal;
+package com.math.arithmetic.natural.internal;
 
 import com.math.BinaryOperation;
-import com.math.natural.Natural;
+import com.math.arithmetic.natural.Natural;
 
 import java.util.Arrays;
 

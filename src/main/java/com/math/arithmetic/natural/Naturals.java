@@ -1,4 +1,4 @@
-package com.math.natural;
+package com.math.arithmetic.natural;
 
 /**
  * Provide convertion method between Natural and primitive number classes as well as strings with 2, 10, 16 radix
